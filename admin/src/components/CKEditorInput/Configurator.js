@@ -121,15 +121,15 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       StrapiMediaLib
     ],
     toolbar: [
-        'undo', 'redo',
-        '|',
-        'heading',
-        '|',
-        'bold', 'italic',
-        '|',
-        'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
-        '|',
-        'bulletedList', 'numberedList', 'outdent', 'indent'
+      'undo', 'redo',
+      '|',
+      'heading',
+      '|',
+      'bold', 'italic',
+      '|',
+      'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
+      '|',
+      'bulletedList', 'numberedList', 'outdent', 'indent'
     ],
     heading: {
       options: [
@@ -230,14 +230,13 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         '|',
         'alignment',
         '|',
-        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent', 
+        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
       ],
       shouldNotGroupWhenFull: true
     },
     heading: {
       options: [
         { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-        { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
         { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
         { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
         { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
@@ -245,14 +244,14 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     },
     list: {
       properties: {
-          styles: true,
-          startIndex: true,
-          reversed: true
+        styles: true,
+        startIndex: true,
+        reversed: true
       }
     },
     image: {
       resizeUnit: "%",
-      resizeOptions: [ {
+      resizeOptions: [{
         name: 'resizeImage:original',
         value: null,
         icon: 'original'
@@ -271,7 +270,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         name: 'resizeImage:75',
         value: '75',
         icon: 'large'
-      } ],
+      }],
       toolbar: [
         'imageStyle:inline', 'imageStyle:block', 'imageStyle:side',
         '|',
@@ -296,15 +295,15 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     },
     fontSize: {
       options: [
-          9,
-          11,
-          13,
-          'default',
-          17,
-          19,
-          21,
-          27,
-          35,
+        9,
+        11,
+        13,
+        'default',
+        17,
+        19,
+        21,
+        27,
+        35,
       ],
       supportAllValues: false
     },
@@ -335,7 +334,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
 };
 
 export default class Configurator {
-  constructor ( fieldConfig ) {
+  constructor(fieldConfig) {
     this.fieldConfig = fieldConfig;
   }
 
@@ -345,12 +344,12 @@ export default class Configurator {
     const maxLength = this.fieldConfig.maxLength;
     const outputOption = this.fieldConfig.options.output;
 
-    if ( outputOption === 'Markdown' ) {
-      config.plugins.push( window.CKEditor5.markdownGfm.Markdown );
+    if (outputOption === 'Markdown') {
+      config.plugins.push(window.CKEditor5.markdownGfm.Markdown);
     }
 
-    if ( maxLength ) {
-      config.plugins.push( window.CKEditor5.maximumLength.MaximumLength );
+    if (maxLength) {
+      config.plugins.push(window.CKEditor5.maximumLength.MaximumLength);
 
       config.maximumLength = {
         characters: maxLength
@@ -363,7 +362,7 @@ export default class Configurator {
   _getBaseConfig() {
     const presetName = this.fieldConfig.options.preset;
 
-    switch ( presetName ) {
+    switch (presetName) {
       case 'light':
         return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
       case 'standard':
