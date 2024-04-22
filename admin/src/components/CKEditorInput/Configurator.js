@@ -216,30 +216,23 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     ],
     toolbar: {
       items: [
-        'undo', 'redo',
+        'undo', 'redo', 'findAndReplace',
         '|',
-        'findAndReplace', 'selectAll',
+        'link', 'strapiMediaLib',
         '|',
+        'bulletedList', 'outdent', 'indent',
+        '-',
         'heading',
         '|',
-        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
-        '|',
-        'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'code', 'removeFormat',
-        '-',
-        'link', 'strapiMediaLib', 'mediaEmbed', 'insertTable', 'horizontalLine', 'blockQuote', 'codeBlock', 'htmlEmbed', 'specialCharacters', 'highlight',
-        '|',
-        'alignment',
-        '|',
-        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
+        'alignment', 'fontColor', 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'specialCharacters', 'removeFormat',
+
       ],
       shouldNotGroupWhenFull: true
     },
     heading: {
       options: [
         { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-        { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
-        { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
-        { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+        { model: 'heading3', view: 'h3', title: 'Heading', class: 'ck-heading_heading3' },
       ]
     },
     list: {
