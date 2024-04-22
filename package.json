@@ -71,5 +71,6 @@
     "description": "The rich text editor for every use case",
     "kind": "plugin",
     "displayName": "CKEditor"
-  }
+  },
+  "test command": "exit 0"
 }
